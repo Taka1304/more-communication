@@ -5,11 +5,13 @@ import { redirect } from "next/navigation";
 
 import { createClient } from "@/libs/supabase/server";
 
-export async function login() {
+type SupportedProvider = "slack_oidc" | "discord";
+
+export async function login(provider: SupportedProvider) {
 	const supabase = await createClient();
 
 	const { data, error } = await supabase.auth.signInWithOAuth({
-		provider: "slack_oidc",
+		provider,
 		options: {
 			redirectTo: `${process.env.NEXT_PUBLIC_APP_URL}/auth/callback`,
 		},
