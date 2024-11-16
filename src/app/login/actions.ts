@@ -13,18 +13,17 @@ export async function login(provider: SupportedProvider) {
 	const { data, error } = await supabase.auth.signInWithOAuth({
 		provider,
 		options: {
-			redirectTo: `${process.env.NEXT_PUBLIC_APP_URL}/auth/callback`,
+			redirectTo: "/auth/callback",
 		},
 	});
 
 	if (error) {
 		redirect("/error");
 	}
-
 	if (data.url) {
 		redirect(data.url);
 	}
 
 	revalidatePath("/app", "layout");
-	redirect("/app");
+	redirect("/app/dashboard");
 }
