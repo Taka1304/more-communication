@@ -26,7 +26,7 @@ export function HeroImageRight() {
 							チームの活性化をサポートする次世代のコラボレーションツール
 						</p>
 
-						<Link href={"/create-workspace"}>
+						<Link href={"/create_workspace"}>
 							<button
 								type="button"
 								className="mt-10 px-12 py-4 text-lg font-bold rounded-lg bg-gradient-to-r from-pink-500 to-yellow-400 text-white hover:opacity-90 transition-opacity"

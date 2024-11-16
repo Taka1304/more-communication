@@ -3,7 +3,11 @@ const WorkspaceTopPage = ({
 }: {
 	params: Promise<{ workspace: string }>;
 }) => {
-	return <div></div>;
+	return (
+		<div>
+			<h1>WorkspaceTopPage</h1>
+		</div>
+	);
 };
 
 export default WorkspaceTopPage;

@@ -7,9 +7,8 @@ export async function middleware(req: NextRequest) {
 
 export const config = {
 	matcher: [
+		// appパス配下のみを保護
 		"/app/:path*",
-		"/login",
-		"/auth/:path*",
-		"/((?!api|_next/static|_next/image|favicon.ico).*)",
+		"/auth/callback",
 	],
 };
