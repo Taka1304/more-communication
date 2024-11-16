@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function HeroImageRight() {
 	return (
 		<div
@@ -24,12 +26,14 @@ export function HeroImageRight() {
 							チームの活性化をサポートする次世代のコラボレーションツール
 						</p>
 
-						<button
-							type="button"
-							className="mt-10 px-12 py-4 text-lg font-bold rounded-lg bg-gradient-to-r from-pink-500 to-yellow-400 text-white hover:opacity-90 transition-opacity"
-						>
-							無料で始める
-						</button>
+						<Link href={"/create-workspace"}>
+							<button
+								type="button"
+								className="mt-10 px-12 py-4 text-lg font-bold rounded-lg bg-gradient-to-r from-pink-500 to-yellow-400 text-white hover:opacity-90 transition-opacity"
+							>
+								無料で始める
+							</button>
+						</Link>
 					</div>
 				</div>
 			</div>

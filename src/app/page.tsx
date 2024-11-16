@@ -9,7 +9,6 @@ export default function Home() {
 				<div className="grid gap-8">
 					<section className="bg-white p-6 rounded-lg shadow">
 						<h2 className="text-2xl font-semibold mb-4">組織登録</h2>
-						{/* Organization registration form will go here */}
 					</section>
 				</div>
 			</div>
